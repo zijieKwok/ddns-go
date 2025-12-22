@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=ddns-go
-PKG_VERSION:=6.12.5
+PKG_VERSION:=6.14.1
 PKG_RELEASE:=2
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
@@ -30,12 +30,12 @@ include $(INCLUDE_DIR)/package.mk
 include $(TOPDIR)/feeds/packages/lang/golang/golang-package.mk
 
 define Package/ddns-go
-  TITLE:=A Linux web GUI client of ddns-go
   SECTION:=net
   CATEGORY:=Network
   SUBMENU:=Web Servers/Proxies
-  DEPENDS:=$(GO_ARCH_DEPENDS) +ca-bundle
+  TITLE:=A Linux web GUI client of ddns-go
   URL:=https://github.com/jeessy2/ddns-go
+  DEPENDS:=$(GO_ARCH_DEPENDS) +ca-bundle
   USERID:=ddns-go:ddns-go
 endef
 
